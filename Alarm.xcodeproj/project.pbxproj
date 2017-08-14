@@ -56,9 +56,9 @@
 		95993E1A1F41215100780E59 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				95993E1F1F41215100780E59 /* Main.storyboard */,
-				95993E2E1F41580100780E59 /* Alarm.swift */,
 				95993E301F415B1700780E59 /* DateHelper.swift */,
+				95993E1F1F41215100780E59 /* Main.storyboard */,
+				95993E321F415DDE00780E59 /* Models */,
 				95993E2D1F41216B00780E59 /* Resources */,
 			);
 			path = Alarm;
@@ -73,6 +73,14 @@
 				95993E271F41215100780E59 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		95993E321F415DDE00780E59 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95993E2E1F41580100780E59 /* Alarm.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

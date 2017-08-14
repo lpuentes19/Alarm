@@ -23,5 +23,29 @@ class Alarm {
         self.uuid = uuid
     }
     
+    var fireDate: Date? {
+        guard let thisMorningAtMidnight = DateHelper.thisMorningAtMidnight else { return nil }
+        let fireTimeInMinutes = Int(fireTimeFromMidnight/60)
+        let fireTimeInSeconds = TimeInterval(fireTimeInMinutes * 60)
+        let fireDateFromThisMorning = Date(timeInterval: fireTimeInSeconds, since: thisMorningAtMidnight)
+        
+        return fireDateFromThisMorning
+    }
     
+    var fireTimeAsString: String {
+        let fireTimeFromMidnight = Int(self.fireTimeFromMidnight)
+        var hours = fireTimeFromMidnight/60/60
+        let minutes = (fireTimeFromMidnight - (hours*60*60)) / 60
+        
+        if hours >= 13 {
+            return String(format: "%2d:%02d PM", [hours - 12, minutes])
+        } else if hours >= 12 {
+            return String(format: "%2d:%02d PM", [hours , minutes])
+        } else {
+            if hours == 0 {
+                hours = 12
+            }
+            return String(format: "%2d:%02d AM", [hours, minutes])
+        }
+    }
 }
