@@ -11,4 +11,8 @@ import UIKit
 class SwitchTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var alarmNameLabel: UILabel!
+    @IBAction func switchValueChanged(_ sender: Any) {
+    }
 }
