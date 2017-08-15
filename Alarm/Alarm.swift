@@ -10,12 +10,12 @@ import Foundation
 
 class Alarm {
     
-    let fireTimeFromMidnight: TimeInterval
-    let title: String
-    let enabled: Bool
+    var fireTimeFromMidnight: TimeInterval
+    var title: String
+    var enabled: Bool
     let uuid: String
     
-    init(fireTimeFromMidnight: TimeInterval, title: String, enabled: Bool, uuid: String) {
+    init(fireTimeFromMidnight: TimeInterval, title: String, enabled: Bool = true, uuid: String = UUID().uuidString) {
         
         self.fireTimeFromMidnight = fireTimeFromMidnight
         self.title = title
