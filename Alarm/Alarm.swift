@@ -8,8 +8,14 @@
 
 import Foundation
 
-class Alarm: Equatable {
+class Alarm: NSObject, NSCoding {
     
+    private let fireTimeFromMidnightKey = "fireTimeFromMidnight"
+    private let titleKey = "title"
+    private let enabledKey = "enabled"
+    private let UUIDKey = "UUID"
+    
+    // MARK: Properties
     var fireTimeFromMidnight: TimeInterval
     var title: String
     var enabled: Bool
@@ -48,8 +54,26 @@ class Alarm: Equatable {
             return String(format: "%2d:%02d AM", [hours, minutes])
         }
     }
+    // MARK: NSObject Methods
+    required init?(coder aDecoder: NSCoder) {
+        
+        guard let title = aDecoder.decodeObject(forKey: titleKey) as? String,
+            let uuid = aDecoder.decodeObject(forKey: UUIDKey) as? String else { return nil }
+        
+        self.fireTimeFromMidnight = TimeInterval(aDecoder.decodeDouble(forKey: fireTimeFromMidnightKey))
+        self.title = title
+        self.enabled = aDecoder.decodeBool(forKey: enabledKey)
+        self.uuid = uuid
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(fireTimeFromMidnight, forKey: fireTimeFromMidnightKey)
+        aCoder.encode(title, forKey: titleKey)
+        aCoder.encode(enabled, forKey: enabledKey)
+        aCoder.encode(uuid, forKey: UUIDKey)
+    }
 }
-
+    // MARK: Equatable
     func ==(lhs: Alarm, rhs: Alarm) -> Bool {
         return lhs.uuid == rhs.uuid
 }
