@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Alarm {
+class Alarm: Equatable {
     
     var fireTimeFromMidnight: TimeInterval
     var title: String
@@ -48,4 +48,8 @@ class Alarm {
             return String(format: "%2d:%02d AM", [hours, minutes])
         }
     }
+}
+
+    func ==(lhs: Alarm, rhs: Alarm) -> Bool {
+        return lhs.uuid == rhs.uuid
 }

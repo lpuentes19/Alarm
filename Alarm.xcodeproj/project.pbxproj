@@ -59,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				95993E301F415B1700780E59 /* DateHelper.swift */,
-				95E5F8781F42A52900A2B345 /* AlarmController.swift */,
 				95993E1F1F41215100780E59 /* Main.storyboard */,
+				95E5F87A1F42AB2D00A2B345 /* ModelController */,
 				95993E321F415DDE00780E59 /* Models */,
 				95993E2D1F41216B00780E59 /* Resources */,
 			);
@@ -84,6 +84,14 @@
 				95993E2E1F41580100780E59 /* Alarm.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		95E5F87A1F42AB2D00A2B345 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				95E5F8781F42A52900A2B345 /* AlarmController.swift */,
+			);
+			name = ModelController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
