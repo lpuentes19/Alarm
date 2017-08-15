@@ -63,8 +63,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="alarmNameLabel" destination="bH2-f7-yL1" id="cUL-Yp-Ki4"/>
+                                    <outlet property="alarmSwitch" destination="AKB-Yz-7ua" id="rXB-nQ-kQs"/>
                                     <outlet property="timeLabel" destination="adE-jp-mJu" id="kMT-ql-jwT"/>
-                                    <segue destination="hLC-hL-Ach" kind="show" id="OwM-NN-5pM"/>
+                                    <segue destination="hLC-hL-Ach" kind="show" identifier="toAlarmDetailVC" id="OwM-NN-5pM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -220,6 +221,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="u7C-5T-WMJ"/>
+        <segue reference="OwM-NN-5pM"/>
     </inferredMetricsTieBreakers>
 </document>

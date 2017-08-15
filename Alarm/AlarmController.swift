@@ -70,11 +70,11 @@ protocol AlarmScheduler {
 
 extension AlarmScheduler {
     
-    func scheduleNotifications(for alarm: Alarm) {
+    func scheduleUserNotifications(for alarm: Alarm) {
         
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = "Time's up!"
-        notificationContent.body = "Your alarm titled \(alarm.title) is done"
+        notificationContent.body = "Your alarm \(alarm.title) is done"
         notificationContent.sound = UNNotificationSound.default()
         
         guard let fireDate = alarm.fireDate else { return }
