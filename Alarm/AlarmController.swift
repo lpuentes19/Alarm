@@ -87,11 +87,11 @@ extension AlarmScheduler {
                 print("Unable to add notification request, \(error.localizedDescription)")
             }
         }
-        
+    }
+    
     func cancelUserNotifications(for alarm: Alarm) {
         
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [alarm.uuid])
-        }
     }
 }
 

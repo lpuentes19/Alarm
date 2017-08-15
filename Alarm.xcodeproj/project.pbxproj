@@ -58,7 +58,6 @@
 		95993E1A1F41215100780E59 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				95993E301F415B1700780E59 /* DateHelper.swift */,
 				95993E1F1F41215100780E59 /* Main.storyboard */,
 				95E5F87A1F42AB2D00A2B345 /* ModelController */,
 				95993E321F415DDE00780E59 /* Models */,
@@ -71,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				95993E1B1F41215100780E59 /* AppDelegate.swift */,
+				95993E301F415B1700780E59 /* DateHelper.swift */,
 				95993E221F41215100780E59 /* Assets.xcassets */,
 				95993E241F41215100780E59 /* LaunchScreen.storyboard */,
 				95993E271F41215100780E59 /* Info.plist */,
